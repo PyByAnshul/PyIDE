@@ -104,8 +104,8 @@
     const term = new Terminal();
     term.open(document.getElementById('terminal'));
     term.writeln('Interactive terminal ready.\r\n');
-
-    const socket = io("http://localhost:5000");
+    
+    const socket = io(window.location.origin);
     let currentRunId = null;
 
     socket.on('output', (data) => {
