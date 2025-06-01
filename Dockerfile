@@ -24,7 +24,7 @@ RUN venv/bin/pip install -r requirements.txt
 COPY supervisord.conf /etc/supervisor/conf.d/supervisord.conf
 
 # Expose ports (adjust as needed)
-EXPOSE 5000 8000
+EXPOSE 5000
 
 # Use supervisor to run multiple processes
 CMD ["/usr/bin/supervisord", "-n"]
